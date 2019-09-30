@@ -11,88 +11,45 @@ https://res.cloudinary.com/dh122sui4/image/upload/v1569854368/Screen_Shot_2019-0
 ## API Snippet
 https://kitsu.io/api/edge/library-entries/45553139
 ```
-{
-    "data": {
-        "id": "45553139",
-        "type": "libraryEntries",
-        "links": {
-            "self": "https://kitsu.io/api/edge/library-entries/45553139"
-        },
-        "attributes": {
-            "createdAt": "2019-08-20T18:32:11.365Z",
-            "updatedAt": "2019-08-20T18:32:11.365Z",
-            "status": "current",
-            "progress": 0,
-            "volumesOwned": 0,
-            "reconsuming": false,
-            "reconsumeCount": 0,
-            "notes": null,
-            "private": false,
-            "reactionSkipped": "unskipped",
-            "progressedAt": "2019-08-20T18:32:11.365Z",
-            "startedAt": "2019-08-20T18:32:11.365Z",
-            "finishedAt": null,
-            "rating": "0.0",
-            "ratingTwenty": null
-        },
-        "relationships": {
-            "user": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/user",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/user"
-                }
-            },
-            "anime": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/anime",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/anime"
-                }
-            },
-            "manga": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/manga",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/manga"
-                }
-            },
-            "drama": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/drama",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/drama"
-                }
-            },
-            "review": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/review",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/review"
-                }
-            },
-            "mediaReaction": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/media-reaction",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/media-reaction"
-                }
-            },
-            "media": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/media",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/media"
-                }
-            },
-            "unit": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/unit",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/unit"
-                }
-            },
-            "nextUnit": {
-                "links": {
-                    "self": "https://kitsu.io/api/edge/library-entries/45553139/relationships/next-unit",
-                    "related": "https://kitsu.io/api/edge/library-entries/45553139/next-unit"
-                }
-            }
-        }
-    }
-}
+https://kitsu.io/api/edge/library-entries/45553139/anime
+App.js:19 
+{data: {…}, status: 200, statusText: "", headers: {…}, config: {…}, …}
+config: {url: "https://kitsu.io/api/edge/library-entries/45553139/anime", method: "get", headers: {…}, transformRequest: Array(1), transformResponse: Array(1), …}
+data:
+data:
+attributes:
+abbreviatedTitles: (4) ["Yugioh", "Yuu Gi Ou! Zexal", "Yu-Gi-Oh! Zeal", "Yu-Gi-Oh! Zexal"]
+ageRating: "PG"
+ageRatingGuide: "Teens 13 or older"
+averageRating: "60.21"
+canonicalTitle: "Yu☆Gi☆Oh! Zexal"
+coverImage: {tiny: "https://media.kitsu.io/anime/cover_images/5995/small.jpg", small: "https://media.kitsu.io/anime/cover_images/5995/small.jpg", large: "https://media.kitsu.io/anime/cover_images/5995/small.jpg", original: "https://media.kitsu.io/anime/cover_images/5995/original.png", meta: {…}}
+coverImageTopOffset: 170
+createdAt: "2013-02-20T17:32:41.171Z"
+endDate: "2012-09-24"
+episodeCount: 73
+episodeLength: 21
+favoritesCount: 22
+nextRelease: null
+nsfw: false
+popularityRank: 2275
+posterImage: {tiny: "https://media.kitsu.io/anime/poster_images/5995/tiny.jpg?1408457139", small: "https://media.kitsu.io/anime/poster_images/5995/small.jpg?1408457139", medium: "https://media.kitsu.io/anime/poster_images/5995/medium.jpg?1408457139", large: "https://media.kitsu.io/anime/poster_images/5995/large.jpg?1408457139", original: "https://media.kitsu.io/anime/poster_images/5995/original.jpg?1408457139", …}
+ratingFrequencies: {2: "63", 3: "0", 4: "80", 5: "0", 6: "76", 7: "2", 8: "174", 9: "4", 10: "195", 11: "4", 12: "288", 13: "5", 14: "276", 15: "4", 16: "124", 17: "3", 18: "53", 19: "1", 20: "127"}
+ratingRank: 7764
+showType: "TV"
+slug: "yu-gi-oh-zexal"
+startDate: "2011-04-11"
+status: "finished"
+subtype: "TV"
+synopsis: "Yu☆Gi☆Oh! Zexal follows the adventures of Yuuma Tsukumo in his hometown, the futuristic city of Heartland. Yuuma is an amateur duelist who wants to become the world's greatest Duel Monsters champion, having learned the basics of dueling from his father who disappeared long ago under mysterious circumstances. Always pushing himself to the limit in order to prove himself, Yuuma soon finds himself outmatched when dueling a bully to recover his friend's stolen cards. Just as hope seems lost, a mysterious spirit named Astral appears and helps Yuuma to win the duel.
+↵Astral explains that his memories have been lost and split into 99 cards called Numbers that have been scattered all over the world. These Numbers are extremely dangerous; each card has a will of its own and can possess any duelist who uses it by bringing out the deepest, and often darkest, desires of that person's heart. Seeing that Astral is a skilled duelist and wanting to better himself, Yuuma reluctantly agrees to assist Astral in recovering the Numbers. But Yuuma and Astral are not the only Number Hunters out there and many of the other parties seeking these powerful cards have much more malicious desires than recovering lost memories."
+tba: null
+titles: {en: "Yu-Gi-Oh! Zexal", en_jp: "Yu☆Gi☆Oh! Zexal", en_us: "Yu-Gi-Oh! Zexal", ja_jp: "遊☆戯☆王ZEXAL"}
+totalLength: 169
+updatedAt: "2019-09-30T18:00:05.128Z"
+userCount: 3140
+youtubeVideoId: "7bkEzfNgjlE"
+__proto__: Object
 ```
 
 ### MVP/PostMVP - 5min

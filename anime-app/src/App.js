@@ -1,14 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import axios from 'axios'
 import './App.css';
 
 class App extends Component {
+constructor(){
+  super()
+  this.state = {
+    loading: true,
+    title: null
+  }
+}
 
-  return (
-    <div className="App">
+componentDidMount= async () => {
+  const url = 'https://kitsu.io/api/edge/users/142706/library-entries'
+  let res = await axios.get(url);
+  console.log(res.data.data[0].relationships.anime.links.related)
+  const response = await axios.get(res.data.data[0].relationships.anime.links.related)
+  console.log(response)
+// console.log(res.data.data[0].relationships.anime.links.self)
+};
 
-    </div>
-  );
+
+render(){
+  return(
+    <div></div>
+  )
+}
+
 }
 
 export default App;
