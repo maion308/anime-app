@@ -12,7 +12,7 @@ This project is an anime search and explore app that let's you search by title a
 https://res.cloudinary.com/dh122sui4/image/upload/v1569854368/Screen_Shot_2019-09-30_at_10.32.30_AM_cevzrl.png
 
 ## API Snippet
-
+https://kitsu.io/api/edge/library-entries/45553139
 ```
 {
     "data": {
