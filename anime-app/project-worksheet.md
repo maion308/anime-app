@@ -1,8 +1,5 @@
 # Project Overview
 
-React App using Kitsu API used for querying anime titles and being able to add collection to favorites
-
-
 ## Project Description
 
 This project is an anime search and explore app that let's you search by title and render the data such as image, url and name of anime series. An external link will lead you to an external site to learn more about your selection. App capabilities include adding favorites to a list, search, browse.
