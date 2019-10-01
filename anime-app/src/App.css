@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -19,4 +23,21 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.src-btn {
+  border-radius: 50%;
 }
