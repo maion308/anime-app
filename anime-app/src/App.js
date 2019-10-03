@@ -122,34 +122,7 @@ class App extends Component {
     this.setState({search: e.target.value});
   }
 
-  handleSearch = async (e) => {
-    try {
-      this.setState({ isLoading: true });
-      const url = `https://kitsu.io/api/edge/manga?page[limit]=20&page[offset]=0&filter[text]=${e.target.value}`;
-      // filter[text]=title
-   
-      let res = await axios.get(url);
-
-      let list = res.data.data
-      console.log(list)
-
-      const data = list.map(item => {
-        return { 
-          title: item.attributes.canonicalTitle,
-          image: item.attributes.posterImage.medium,
-          synopsis: item.attributes.synopsis,
-          
-        };
-      });
-      this.setState({
-        filteredData: data,
-        isLoading: false,
-      })
-    } catch (error) {
-      console.error(error);
-    }
-
-  }
+ 
 
 
 
@@ -159,13 +132,13 @@ console.log("filteredData: ", filteredData);
     return (
       <div className="flex-container">
       <Header />
-      <Search />
-        <Browse onGenreChange={this.handleGenre} />
+      {/* <Search />
+        <Browse onGenreChange={this.handleGenre} /> */}
 
         <Switch>
           {/* Setting up the router here with a render so we can pass props
           to the component that the route renders */}
-          <Route exact path = "/browse" component={Browse}/>
+          <Route exact path = "/browse" render = {() => <Browse onGenreChange={this.handleGenre}/>} />
           <Route exact path = "/search" component = {Search} />
         
         </Switch>
