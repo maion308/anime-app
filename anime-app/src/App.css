@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+/* #root{
+  min-height: 100vh;
+  background-image: url('https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Colorful-Abstract-Backgrounds-PIC-WPB0012410.jpg')
+} */
+
 .App {
   text-align: center;
 }
@@ -27,17 +32,15 @@
 
 .container {
   margin: 0 auto;
-  width: 1vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  
 }
 
 li {
   list-style-type: none;
 }
 
-.src-btn {
-  border-radius: 50%;
-}
