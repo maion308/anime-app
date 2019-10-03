@@ -2,10 +2,25 @@
   margin: 0;
 }
 
-/* #root{
-  min-height: 100vh;
-  background-image: url('https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Colorful-Abstract-Backgrounds-PIC-WPB0012410.jpg')
-} */
+
+
+body {
+  /* background-image: url('https://st2.depositphotos.com/2459687/10387/v/950/depositphotos_103875686-stock-illustration-manga-comic-book-flash-explosion.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ background-size: cover;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://cdna.artstation.com/p/assets/images/images/012/222/908/large/gaelle-marco-background-athena-1.jpg?1533678279');
+  min-width: 100%;
+  min-height: 20vh;
+  background-size: cover;
+}
 
 .App {
   text-align: center;
@@ -44,3 +59,20 @@ li {
   list-style-type: none;
 }
 
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-self: center;
+}
+
+p {
+  font-weight: 600;
+}

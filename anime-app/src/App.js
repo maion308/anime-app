@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './App.css';
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Header from './components/Header'
 import Browse from './components/Browse'
+import Search from './components/Search'
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +36,7 @@ class App extends Component {
         return { 
           title: item.attributes.canonicalTitle,
           image: item.attributes.posterImage.medium,
+          synopsis: item.attributes.synopsis
           // link: 
         };
       });
@@ -101,6 +104,8 @@ class App extends Component {
         return { 
           title: item.attributes.canonicalTitle,
           image: item.attributes.posterImage.medium,
+          synopsis: item.attributes.synopsis,
+          
         };
       });
       this.setState({
@@ -113,6 +118,38 @@ class App extends Component {
     }
   }
   
+  handleChange(e) {
+    this.setState({search: e.target.value});
+  }
+
+  handleSearch = async (e) => {
+    try {
+      this.setState({ isLoading: true });
+      const url = `https://kitsu.io/api/edge/manga?page[limit]=20&page[offset]=0&filter[text]=${e.target.value}`;
+      // filter[text]=title
+   
+      let res = await axios.get(url);
+
+      let list = res.data.data
+      console.log(list)
+
+      const data = list.map(item => {
+        return { 
+          title: item.attributes.canonicalTitle,
+          image: item.attributes.posterImage.medium,
+          synopsis: item.attributes.synopsis,
+          
+        };
+      });
+      this.setState({
+        filteredData: data,
+        isLoading: false,
+      })
+    } catch (error) {
+      console.error(error);
+    }
+
+  }
 
 
 
@@ -120,19 +157,33 @@ class App extends Component {
 const {filteredData, isLoading} = this.state
 console.log("filteredData: ", filteredData);
     return (
-      <div>
+      <div className="flex-container">
+      <Header />
+      <Search />
         <Browse onGenreChange={this.handleGenre} />
-    <p>
+
+        <Switch>
+          {/* Setting up the router here with a render so we can pass props
+          to the component that the route renders */}
+          <Route exact path = "/browse" component={Browse}/>
+          <Route exact path = "/search" component = {Search} />
+        
+        </Switch>
+
+
+        
+    <div>
       { 
         isLoading
-          ? <p>I'm loading...</p>
+          ? <span>I'm loading...</span>
           : filteredData.map((item, index) => (
-            <React.Fragment key={item.image}>
+            <div key={item.image}>
               <span>{item.title}</span>
               <img src={item.image} alt="manga" />
-            </React.Fragment>
+              <p>Synopsis: {item.synopsis}</p>
+            </div>
           ))}
-    </p>
+    </div>
 
       </div>
     )
@@ -140,7 +191,10 @@ console.log("filteredData: ", filteredData);
 
 }
 
-export default App;
+export default () => (
+  <Router><App/></Router>
+)
+
 
 // App.js (in mapFn)
 /**
