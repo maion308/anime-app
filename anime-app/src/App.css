@@ -33,6 +33,13 @@ body {
    margin: 25px;
  }
 
+ button {
+   width: 75%;
+   font-weight: 600;
+   font-size: 25px;
+   padding: 10px;
+   border-radius: 25px;
+ }
  .App-header {
    background-color: #282c34;
    min-height: 100vh;
