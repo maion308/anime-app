@@ -1,23 +1,16 @@
-* {
-  margin: 0;
-}
-
-
 
 body {
-  /* background-image: url('https://st2.depositphotos.com/2459687/10387/v/950/depositphotos_103875686-stock-illustration-manga-comic-book-flash-explosion.jpg'); */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
- background-size: cover;
+ background-color: powderblue;
 }
 
 header {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url('https://cdna.artstation.com/p/assets/images/images/012/222/908/large/gaelle-marco-background-athena-1.jpg?1533678279');
-  min-width: 100%;
+  width: 100%;
   min-height: 20vh;
   background-size: cover;
 }
@@ -47,7 +40,7 @@ header {
 
 .container {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,6 +50,15 @@ header {
 
 li {
   list-style-type: none;
+}
+
+li a {
+  padding:10px;
+  text-decoration: none
+}
+
+a::hover{
+  background-color: mistyrose;
 }
 
 div {
@@ -75,4 +77,14 @@ align-self: center;
 
 p {
   font-weight: 600;
+  width: 80%;
+  padding: 55px;
+  border: 3px solid black;
+}
+
+.nav-bar{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

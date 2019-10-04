@@ -35,7 +35,7 @@ class Search extends Component {
         return(
             <div>
                 <input id="search-box" type="text" onChange={this.handleChange} props={search}/>
-                <input id="btn" type="submit" onclick={this.handleSearch} props={search}/>
+                <input id="btn" type="submit" onclick={this.handleSearch}/>
             </div>
         )
     }

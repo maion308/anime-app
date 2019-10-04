@@ -7,7 +7,7 @@ class Header extends Component {
     render(){
         return(
         <header>
-           <ul>
+           <ul className="nav-bar">
                <li><Link to='/'>Home</Link></li>
                <li><Link to='/browse'>Browse</Link></li>
                <li><Link to='/search'>Search</Link></li>
