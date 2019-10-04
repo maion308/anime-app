@@ -100,16 +100,16 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-|Header Footer|    L   | 1hr   | 2hr   |
-|  Collection |    H   | 6hr   | 7hr   |
-|  Search     |    H   | 6hr   | 8hr   |
-|  Browse     |    H   | 6hr   | 8hr   |
-|   App       |    H   | 8hr   | 10hr  | 
-|   API       |    H   | 8hr   | 10hr  |
-|  Router     |    H   | 6hr   | 8hr   |
-|  CSS        |    M   | 5hr   | 7hr   |
-| state/props |    H   | 8hr   | 10hr  |
-| Total       |    H   | 54hr  | 70hr  | 
+|Header Footer|    L   | 1hr   | 2hr   | 	2hr
+|  Collection |    H   | 6hr   | 7hr   | 	5hr
+|  Search     |    H   | 6hr   | 8hr   |	5hr
+|  Browse     |    H   | 6hr   | 8hr   |	5hr
+|   App       |    H   | 8hr   | 10hr  | 	5hr
+|   API       |    H   | 8hr   | 10hr  |	5hr
+|  Router     |    H   | 6hr   | 8hr   |	1hr
+|  CSS        |    M   | 5hr   | 7hr   |	2hr
+| state/props |    H   | 8hr   | 10hr  |	4hr
+| Total       |    H   | 54hr  | 70hr  | 	34hr
 
 
 ## Additional Libraries
