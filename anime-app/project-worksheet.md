@@ -120,13 +120,25 @@ Axios - will be used for ajax request for api
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+function MyCardComponent(props) {
+    const { card } = props;
+   return (
+     <button onClick={() => window.location.href(card.link)}> 
+       <span>{card.title}</span>
+       <img src={card.image} alt="manga" />
+     </button>
+   )
+  }
+ 
+  export default MyCardComponent;
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+ Almost all issues (many) had to do with getting
+ familiar with the Kitsu api. The api provides tons of data
+ handling and accessing is difficult to grasp but once I got it
+ I am very fond of this api and I will use it in future projects.
+ This consumed most my time, getting to know how to use this api
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                

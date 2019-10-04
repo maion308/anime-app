@@ -20,22 +20,15 @@ class App extends Component {
   componentDidMount = async () => {
     try {
       const url = 'https://kitsu.io/api/edge/manga?page[limit]=20&page[offset]=0';
-      // filter[genres]=adventure
       let res = await axios.get(url);
-      // console.log(res.headers)
-      // console.log(res.data.data[0].relationships.anime.links.related)
       let list = res.data.data
-      console.log(list)
-
       const data = list.map(item => {
         return { 
           title: item.attributes.canonicalTitle,
           image: item.attributes.posterImage.medium,
           synopsis: item.attributes.synopsis
-          // link: 
         };
       });
-      // data = [{ title: myTitle, image: /.fdfnjnf/.. }]
       this.setState({
         filteredData: data,
         isLoading: false,
@@ -50,12 +43,8 @@ class App extends Component {
     try {
       this.setState({ isLoading: true });
       const url = `https://kitsu.io/api/edge/manga?page[limit]=20&page[offset]=0&filter[genres]=${e.target.value}`;
-      // filter[genres]=adventure
       let res = await axios.get(url);
-
       let list = res.data.data
-      console.log(list)
-
       const data = list.map(item => {
         return { 
           title: item.attributes.canonicalTitle,
@@ -79,12 +68,8 @@ class App extends Component {
     try {
       this.setState({ isLoading: true });
       const url = `https://kitsu.io/api/edge/manga?page[limit]=20&page[offset]=0&filter[text]=${search}`;
-      // filter[genres]=adventure
       let res = await axios.get(url);
-
       let list = res.data.data
-      console.log(list)
-
       const data = list.map(item => {
         return { 
           title: item.attributes.canonicalTitle,
@@ -103,20 +88,14 @@ class App extends Component {
     }
   }
 
-
   render() {
 const {filteredData, isLoading} = this.state
-console.log("filteredData: ", filteredData);
     return (
       <div className="flex-container">
       <Header />
-      {/* <Search />
-        <Browse onGenreChange={this.handleGenre} /> */}
-
         <Switch>
           <Route exact path = "/browse" render = {() => <Browse onGenreChange={this.handleGenre}/>} />
           <Route exact path = "/search" render = {() => <Search handleSearch={this.handleSearch}/>} />
-
         </Switch>
     
     <div className="main-container">
@@ -134,7 +113,6 @@ console.log("filteredData: ", filteredData);
     </div>
     )
   }
-
 }
 
 export default () => (

@@ -17,20 +17,12 @@ class Search extends Component {
         try {
             const res = await axios.get(search_url);
             console.log(res)
-            // console.log("Categories Data:", res.data.data[0].attributes.title)
-            // const result = res.data.data.map(item => item.attributes.title)
-            // this.setState({
-            //     search: result
-            // })
         }
         catch(err) {
 
             console.log(err)
         }
-        
-
-
-        
+           
     }
 
     handleChange = (e) => {
@@ -48,7 +40,6 @@ class Search extends Component {
         )
     }
 }
-
 
 
 export default Search
