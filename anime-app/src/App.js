@@ -74,9 +74,35 @@ class App extends Component {
     }
   }
   
-  handleChange(e) {
-    this.setState({search: e.target.value});
+
+  handleSearch = async (search) => {
+    try {
+      this.setState({ isLoading: true });
+      const url = `https://kitsu.io/api/edge/manga?page[limit]=20&page[offset]=0&filter[text]=${search}`;
+      // filter[genres]=adventure
+      let res = await axios.get(url);
+
+      let list = res.data.data
+      console.log(list)
+
+      const data = list.map(item => {
+        return { 
+          title: item.attributes.canonicalTitle,
+          image: item.attributes.posterImage.medium,
+          synopsis: item.attributes.synopsis,
+          
+        };
+      });
+      this.setState({
+        filteredData: data,
+        isLoading: false,
+      })
+      
+    } catch (error) {
+      console.error(error);
+    }
   }
+
 
   render() {
 const {filteredData, isLoading} = this.state
@@ -89,7 +115,8 @@ console.log("filteredData: ", filteredData);
 
         <Switch>
           <Route exact path = "/browse" render = {() => <Browse onGenreChange={this.handleGenre}/>} />
-          <Route exact path = "/search" component = {Search} />
+          <Route exact path = "/search" render = {() => <Search handleSearch={this.handleSearch}/>} />
+
         </Switch>
     
     <div className="main-container">
@@ -98,7 +125,7 @@ console.log("filteredData: ", filteredData);
           ? <span>I'm loading...</span>
           : filteredData.map((item, index) => (
             <div key={item.image}>
-              <h3>Title:{item.title}</h3>
+              <h3>Title: {item.title}</h3>
               <img src={item.image} alt="manga" />
               <p className="my-para">Synopsis: {item.synopsis}</p>
             </div>

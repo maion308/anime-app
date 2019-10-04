@@ -28,14 +28,22 @@ class Search extends Component {
             console.log(err)
         }
         
+
+
+        
     }
+
+    handleChange = (e) => {
+        this.setState({search: e.target.value});
+      }
 
     render(){
          const {search} = this.state;
+         const {handleSearch } = this.props
         return(
             <div>
-                <input id="search-box" type="text" onChange={this.handleChange} props={search}/>
-                <input id="btn" type="submit" onclick={this.handleSearch}/>
+                <input id="search-box" type="text" onChange={this.handleChange} value={search}/>
+                <button id="btn" type="button" onClick={()=>handleSearch(search)}>search</button>
             </div>
         )
     }

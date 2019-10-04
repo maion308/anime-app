@@ -1,90 +1,103 @@
+@media(min-width:300px){
 
 body {
- background-color: powderblue;
-}
+  background-color: powderblue;
+ }
+ 
+ header {
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-image: url('https://cdna.artstation.com/p/assets/images/images/012/222/908/large/gaelle-marco-background-athena-1.jpg?1533678279');
+   width: 100%;
+   min-height: 20vh;
+   background-size: cover;
+ }
+ 
+ .App {
+   text-align: center;
+ }
+ 
+ .App-logo {
+   height: 40vmin;
+ }
 
-header {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url('https://cdna.artstation.com/p/assets/images/images/012/222/908/large/gaelle-marco-background-athena-1.jpg?1533678279');
-  width: 100%;
-  min-height: 20vh;
-  background-size: cover;
-}
+ input{
+   margin:25px;
+   padding: 15px;
+ }
 
-.App {
-  text-align: center;
-}
+ select{
+   margin: 25px;
+ }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-
-.container {
-  margin: 0 auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  
-}
-
-li {
-  list-style-type: none;
-}
-
-li a {
-  padding:10px;
-  text-decoration: none
-}
-
-a::hover{
-  background-color: mistyrose;
-}
-
-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-img {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-self: center;
-}
-
-p {
-  font-weight: 600;
-  width: 80%;
-  padding: 55px;
-  border: 3px solid black;
-}
-
-.nav-bar{
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+ .App-header {
+   background-color: #282c34;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: calc(10px + 2vmin);
+   color: white;
+ }
+ 
+ .App-link {
+   color: #09d3ac;
+ }
+ 
+ .container {
+   margin: 0 auto;
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   
+ }
+ 
+ li {
+   list-style-type: none;
+ }
+ 
+ li a {
+   padding:10px;
+   font-size:36px;
+   color:red;
+   text-decoration: none
+ }
+ 
+ a::hover{
+   background-color: mistyrose;
+ }
+ 
+ div {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+ }
+ 
+ img {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-self: center;
+ }
+ 
+ p {
+   font-weight: 600;
+   width: 80%;
+   padding: 55px;
+   border: 3px solid black;
+ }
+ 
+ .nav-bar{
+   width: 80%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+ }
 }
