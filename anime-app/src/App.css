@@ -1,7 +1,7 @@
 @media(min-width:300px){
 
 body {
-  background-color: powderblue;
+  background-image: linear-gradient(right, red);
  }
  
  header {
